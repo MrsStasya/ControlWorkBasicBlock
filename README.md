@@ -12,3 +12,10 @@
 [“Hello”, “2”, “world”, “:-)”] → [“2”, “:-)”]
 [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 [“Russia”, “Denmark”, “Kazan”] → []
+
+## Решение и пояснения
+## Ссылка на GitHub: https://github.com/MrsStasya/ControlWorkBasicBlock
+## Блок-схема.
+
+![Блок-схема](AlgorithmBlockDiagram.png)
+
