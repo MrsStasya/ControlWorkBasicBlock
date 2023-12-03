@@ -21,16 +21,24 @@
 
 ## Описание решения
 1. Запросим у пользователя ввод элементов массива через пробел и считаем, введенные пользователем элементы
+
 Console.WriteLine("Введите элементы массива через пробел:");
 string input = Console.ReadLine();
+
 2. Создадим массив, содержащий все элементы, введенные пользователем. 
+
     string[] inputArray = input.Split(new[] { ' ' },StringSplitOptions.RemoveEmptyEntries);
+
     Для удаления пустот будем использовать StringSplitOptions.RemoveEmptyEntries. ТЭта конструкция также необходима, чтобы удалить случайно нажатые несколько раз пробелы.
 
 3. Далее произведем подсчет количества символов в каждом элементе массива.
+
 Введем count - счетчик
+
 С помощью цикла for проходимся по всем элементам массива
+
 в цикле if проверяем каждый элемент на соотвествие условий задачи(элементы не должны превышать 3х символов)
+
     int count = 0; 
     for (int i = 0; i < inputArray.Length; i++)
     {
@@ -39,7 +47,9 @@ string input = Console.ReadLine();
             count++;
         }
     }
+
 4. Создаем новый массив, содержащий только те элементы длинна которых меньше или равна 3.
+
     string[] resultArray = new string[count];
     int index = 0; 
     for (int i = 0; i < inputArray.Length; i++)
@@ -50,9 +60,13 @@ string input = Console.ReadLine();
             index++;
         }
     }
+
 5. Выведем полученный массив на экран
+
 inputOutput - переменная для вывода изначального массива.
+
 resultOutput - переменная для вывода конечного массива.
+
     string inputOutput = string.Join("\", \"", inputArray);
     string resultOutput = string.Join("\", \"", resultArray);
     Console.WriteLine($"[\"{inputOutput}\"] -> [\"{resultOutput}\"]");
